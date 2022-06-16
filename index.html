@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>#todo</title>
+  </head>
+  <body>
+    <h1 class="text-center heading">#todo</h1>
+
+    <div class="container">
+      <h3 id="currentTab">Current Tab: all</h3>
+      <div class="navContainer">
+        <nav
+          class="navbar navbar-expand-lg navbar-light bg-white text-center"
+          id="navBar"
+        >
+          <button class="tablinks" id="all">ALL</button>
+          <button class="tablinks" id="active">Active</button>
+          <button class="tablinks" id="completed">Completed</button>
+        </nav>
+      </div>
+
+      <div class="todoInput">
+        <div class="mb-3" id="mainformWrapper">
+          <form id="main-form" class="d-flex">
+            <input
+              type="text"
+              class="form-control mt-2"
+              id="inp"
+              placeholder="add details"
+            />
+            <button
+              type="submit"
+              id="addBtn"
+              class="btn btn-info ms-4 p-3 mt-2"
+            >
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div id="mainDiv"></div>
+
+      <div id="deleteButtonDiv"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

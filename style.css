@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding:0%;
+}
+ 
+body{
+    font-family: cursive;
+} 
+
+.tablinks{
+    padding: 3px 7px;
+    /* border: none!important; */
+    background-color: #3787ee;
+    border-radius: 3px;
+    color: aliceblue;
+    
+    
+}
+
+.navbar{
+    justify-content: space-between ;
+    /* text-decoration: underline; */
+
+
+}
+
+.form-control {
+    border-color:blue;
+}
+
+.heading{
+    text-decoration: underline;
+}
+
+#clearBtnAll{
+    color:aliceblue;
+    padding: 5px;
+    border-radius: 3px;
+    background-color:crimson;
+    float: right;
+    margin-top: 5px;
+    border-color: blue;
+    
+}
+
+.todoDiv{
+    display:flex;
+    
+}
+
+
+#cBox{
+    align-items: center;
+    margin-top: 7px;
+    
+}
+.todo{
+    margin-left: 10px;
+    /* font-size: larger; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+#main-form{
+    width: 100%;
+}
+
+/* #main-form .btn{float: right} */
+
+
+.todo{
+    margin-left: 5px;
+    margin-bottom:10px;
+}
+
+
+.cBox{
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 3px;
+}
+
+
+
+
+#clearBtn{
+    color:aliceblue;
+    padding: 3px;
+    border-radius: 3px;
+    background-color:crimson;
+    margin-left: auto;
+    margin-top: 5px;
+    
+
+}
+
+
+button.active{
+    border-radius: 4px 4px 0px 0px;
+    border-bottom: 4px solid #2f80ed;
+    width: 80px;
+    justify-self: center;
+    
+}
