@@ -8,6 +8,7 @@
  
 body{
     font-family: cursive;
+    background-color: aliceblue;
 } 
 
 .tablinks{
@@ -22,6 +23,7 @@ body{
 
 .navbar{
     justify-content: space-between ;
+    background-color: burlywood;
     /* text-decoration: underline; */
 
 
