@@ -38,7 +38,7 @@ const renderLatestItem = (data) => {
 
 const render = () => {
   $currentTab.innerHTML = `Current Tab: ${currentTab}`;
-  console.log(data);
+  //console.log(data);
   $mainDiv.innerHTML = "";
   let newData = getNewData();
   // newData.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0)); // Sorting the newData
