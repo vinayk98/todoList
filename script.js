@@ -12,25 +12,20 @@ let data = [];
 let currentTab = "all";
 let clearAllButtonExists = false;
 
-const renderLatestItem = (data) => {
-  const el = {
-    name: data,
-    checked: false,
-  };
-  const index = data.length - 1;
-  const $cbox = createCbox(el, index);
-  const $todo = createTodo(el, index);
-  const $todoDiv = createTodoDiv($cbox, $todo, el);
+const renderLatestItem = (index) => {
+  const $cbox = createCbox(data[index], index);
+  const $todo = createTodo(data[index], index);
+  const $todoDiv = createTodoDiv($cbox, $todo, data[index]);
 
   $cbox.addEventListener("click", () => {
     if ($cbox.checked === true) {
       $todo.style.textDecoration = "line-through";
       $todo.className = "activeClass";
-      el.checked = true;
+      data[index].checked = true;
     } else {
       $todo.style.textDecoration = "none";
       $todo.className = "UnactiveClass";
-      el.checked = false;
+      data[index].checked = false;
     }
   });
   $mainDiv.appendChild($todoDiv);
@@ -38,7 +33,6 @@ const renderLatestItem = (data) => {
 
 const render = () => {
   $currentTab.innerHTML = `Current Tab: ${currentTab}`;
-  //console.log(data);
   $mainDiv.innerHTML = "";
   let newData = getNewData();
   // newData.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0)); // Sorting the newData
@@ -53,10 +47,16 @@ const render = () => {
         $todo.style.textDecoration = "line-through";
         $todo.className = "activeClass";
         el.checked = true;
+        if (currentTab === "active") {
+          render();
+        }
       } else {
         $todo.style.textDecoration = "none";
         $todo.className = "UnactiveClass";
         el.checked = false;
+        if (currentTab === "completed") {
+          render();
+        }
       }
     });
     $mainDiv.appendChild($todoDiv);
@@ -140,10 +140,10 @@ $form.addEventListener("submit", (e) => {
   e.preventDefault();
   if ($inp.value !== "") {
     data.push({ name: $inp.value, checked: false });
-    renderLatestItem($inp.value);
+    //renderLatestItem(data.length - 1);
     $inp.value = "";
 
-    //render();
+    render();
   }
 });
 
